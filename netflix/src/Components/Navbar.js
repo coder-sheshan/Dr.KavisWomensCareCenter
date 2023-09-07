@@ -2,31 +2,44 @@ import React, { useCallback, useState } from "react";
 import Logo from "../Assets/LOGO.png";
 import Appoint from "./Appoint";
 
+
 const MobileMenuItems = () => {
   return (
     <div class="md:hidden bg-pink-600">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
         <a
           class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          href="/#"
+          href="/"
         >
           Home
         </a>
         <a
-          class="text-gray-800 dark:text-white block px-3 py-2 rounded-md text-base font-medium"
-          href="/#"
+          class="text-gray-300 dark:text-white block px-3 py-2 rounded-md text-base font-medium"
+          href="/about"
         >
-          Gallery
+          About
         </a>
         <a
           class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          href="/#"
+          href="/service"
         >
-          Content
+          Services
         </a>
         <a
           class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          href="/#"
+          href="/consultant"
+        >
+          Consultant
+        </a>
+        <a
+          class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          href="/testimonial"
+        >
+          Testimonials
+        </a>
+        <a
+          class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          href="/contact"
         >
           Contact
         </a>
@@ -59,7 +72,7 @@ const Navbar = () => {
                 <img src={Logo} alt="Logo" />
               </a>
             </div>
-            <div class="hidden md:block">
+            <div class="hidden lg:block">
               <div class="flex items-baseline ml-10 space-x-10">
                 <a
                   class="text-pink-800 antialiased hover:bg-pink-600 rounded-xl px-5 hover:text-white font-poppins text-xl  transition"
@@ -111,7 +124,7 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
-            <div class="flex -mr-2 md:hidden">
+            <div class="flex -mr-2 lg:hidden">
               <button
                 onClick={toggleMobileMenu}
                 class="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none"

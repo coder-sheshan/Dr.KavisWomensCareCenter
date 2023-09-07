@@ -7,7 +7,7 @@ const Services = () => {
     AOS.init({duration: 800});
   },[])
   return (
-    <div className="bg-white h-100% w-full p-5">
+    <div className="h-100% w-[100vw] p-5 overflow-hidden">
       <h1 className="text-xl flex justify-center align-middle font-normal p-5">
         Our Services
       </h1>

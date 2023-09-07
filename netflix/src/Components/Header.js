@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div>
+    <div className="w-[100vw] overflow-hidden">
       <div className=" h-[50px] w-full flex gap-7 static">
         <div className=" h-[28px] w-[151px] text-center top-5 absolute left-5 rounded-3xl bg-pink-100">
           91+ 9080520887

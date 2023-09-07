@@ -9,7 +9,7 @@ const Slider = () => {
     AOS.init({duration: 3000});
   },[])
   return (
-    <div data-aos="fade-in">
+    <div data-aos="fade-in" className="w-[100vw] bg-red-500">
       <section className="relative bg-cover bg-center bg-no-repeat"
         style={{backgroundImage:`url(${slide})`}}
       >
