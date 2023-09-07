@@ -14,7 +14,7 @@ const MobileMenuItems = () => {
           Home
         </a>
         <a
-          class="text-gray-300 dark:text-white block px-3 py-2 rounded-md text-base font-medium"
+          class="text-gray-300 hover:text-gray-800 dark:text-white block px-3 py-2 rounded-md text-base font-medium"
           href="/about"
         >
           About
@@ -127,7 +127,7 @@ const Navbar = () => {
             <div class="flex -mr-2 lg:hidden">
               <button
                 onClick={toggleMobileMenu}
-                class="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none"
+                class="text-indigo-800  hover:text-indigo-500 inline-flex items-center justify-center p-2 rounded-md focus:outline-none"
               >
                 <svg
                   width="20"
