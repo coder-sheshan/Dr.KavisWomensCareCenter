@@ -1,29 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState, useEffect} from "react";
 import Baby from '../Assets/Smallbaby.jpg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Aboutus = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setIsVisible(true);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+    AOS.init({duration: 3000});
+  },[])
   return (
-    <div className={`transform transition-opacity duration-500 ${
-      isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
-    }`}>
+    <div >
       <section className="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center">
-        <div className="p-8 md:p-12 lg:px-16 lg:py-24">
+        <div className="p-8 md:p-12 lg:px-16 lg:py-24"  data-aos="fade-right">
           <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
             <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
             We turn your Hope into Happiness
@@ -48,6 +35,7 @@ const Aboutus = () => {
         </div>
 
         <img
+            data-aos="fade-left"
           alt="Baby"
         src={Baby}
           className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"

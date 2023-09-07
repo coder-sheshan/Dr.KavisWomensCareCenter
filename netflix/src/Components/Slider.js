@@ -1,9 +1,15 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import slide from "../Assets/Slider1.jpg";
+import Typewriter from 'typewriter-effect';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Slider = () => {
+  useEffect(() => {
+    AOS.init({duration: 3000});
+  },[])
   return (
-    <div>
+    <div data-aos="fade-in">
       <section className="relative bg-cover bg-center bg-no-repeat"
         style={{backgroundImage:`url(${slide})`}}
       >
@@ -12,7 +18,14 @@ const Slider = () => {
         <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
           <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
             <h1 className="text-2xl text-pink-500 font-extrabold sm:text-3xl">
-            தாய்மை கனவு மெய்ப்பட வேண்டும்
+              <Typewriter
+              options={{
+                autoStart: true,
+                loop: true,
+                delay: 50,
+                strings: ["தாய்மை கனவு மெய்ப்பட வேண்டும்"]
+              }}
+              />
               <strong className="block  text-3xl font-semibold mt-5 font-poppins text-rose-700">
                 Hope to Happiness
               </strong>

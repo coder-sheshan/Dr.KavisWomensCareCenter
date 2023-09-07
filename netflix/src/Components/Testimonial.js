@@ -1,9 +1,14 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Paro from "../Assets/paro.jpg";
 
 const Testimonial = () => {
+  useEffect(() => {
+    AOS.init({duration: 200});
+  },[])
   return (
-    <div>
+    <div data-aos="zoom-in">
       <h1 className="text-xl flex justify-center align-middle font-normal p-5">
         Read trusted reviews from our Patients
       </h1>

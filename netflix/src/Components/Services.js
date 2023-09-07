@@ -1,13 +1,18 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Services = () => {
+  useEffect(() => {
+    AOS.init({duration: 800});
+  },[])
   return (
     <div className="bg-white h-100% w-full p-5">
       <h1 className="text-xl flex justify-center align-middle font-normal p-5">
         Our Services
       </h1>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-        <article className="rounded-lg border border-gray-100 bg-pink-100 p-4 shadow-sm transition hover:shadow-lg sm:p-6">
+        <article className="rounded-lg border border-gray-100 bg-pink-100 p-4 shadow-sm transition hover:shadow-lg sm:p-6" data-aos="fade-right">
           {/* <span className="inline-block rounded bg-blue-600 p-2 text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +60,7 @@ const Services = () => {
           </a>
         </article>
 
-        <article className="rounded-lg border border-gray-100 bg-pink-100 p-4 shadow-sm transition hover:shadow-lg sm:p-6">
+        <article className="rounded-lg border border-gray-100 bg-pink-100 p-4 shadow-sm transition hover:shadow-lg sm:p-6" data-aos="zoom-in">
           {/* <span className="inline-block rounded bg-blue-600 p-2 text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +108,7 @@ const Services = () => {
           </a>
         </article>
 
-        <article className="rounded-lg border border-gray-100 bg-pink-100 p-4 shadow-sm transition hover:shadow-lg sm:p-6">
+        <article className="rounded-lg border border-gray-100 bg-pink-100 p-4 shadow-sm transition hover:shadow-lg sm:p-6" data-aos="fade-left">
           {/* <span className="inline-block rounded bg-blue-600 p-2 text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"

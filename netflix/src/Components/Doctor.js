@@ -1,13 +1,18 @@
-import React from "react";
-import doctor from "../Assets/doctor.jpg";
+import React, {useState, useEffect} from "react";
+import Typewriter from 'typewriter-effect';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Doctor = () => {
+  useEffect(() => {
+    AOS.init({duration: 3000});
+  },[])
   return (
     <div>
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-            <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
+            <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full" data-aos="fade-left">
               <img
                 alt="Doctor_Img"
                 src="https://www.skshospital.org/wp-content/uploads/2021/03/Dr.kavita-nagarajan.jpg"
@@ -21,8 +26,14 @@ const Doctor = () => {
               </h2>
 
               <p className="mt-2 text-indigo-800 max-w-lg sm:text-xl/relaxed">
-              Dr.KAVITHA NAGARAJAN MD.,(OG), MRCOG (UK), Fellow (Repr.Med), MICG
-              Clinical Director & Consultant Repr. Med
+                <Typewriter
+                options={{
+                  autoStart: true,
+                  loop: true,
+                  delay: 50,
+                  strings: ["Dr.KAVITHA NAGARAJAN MD.,(OG), MRCOG (UK), Fellow (Repr.Med), MICG Clinical Director & Consultant Repr. Med"]
+                }}
+             />
             </p>
 
               <p className="mt-3 text-justify">

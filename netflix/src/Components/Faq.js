@@ -1,6 +1,11 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Faq = () => {
+  useEffect(() => {
+    AOS.init({duration: 200});
+  },[])
   return (
     <div className="mx-5 my-5 px-3 py-3 bg-pink-200">
         
@@ -10,7 +15,7 @@ const Faq = () => {
       <div className="space-y-4 text-justify">
         <details
           className="group border-s-4 border-pink-500 bg-purple-50 p-6 [&_summary::-webkit-details-marker]:hidden"
-          open
+          data-aos="fade-up"
         >
           <summary className="flex cursor-pointer items-center justify-between gap-1.5">
             <h2 className="text-lg font-medium text-gray-900">
@@ -46,7 +51,7 @@ const Faq = () => {
           </p>
         </details>
 
-        <details className="group border-s-4 border-pink-500 bg-purple-50 p-6 [&_summary::-webkit-details-marker]:hidden">
+        <details className="group border-s-4 border-pink-500 bg-purple-50 p-6 [&_summary::-webkit-details-marker]:hidden" data-aos="fade-up">
           <summary className="flex cursor-pointer items-center justify-between gap-1.5">
             <h2 className="text-lg font-medium text-gray-900">
               What is Infertility?
@@ -79,7 +84,7 @@ const Faq = () => {
           </p>
         </details>
 
-        <details className="group border-s-4 border-pink-500 bg-purple-50 p-6 [&_summary::-webkit-details-marker]:hidden">
+        <details className="group border-s-4 border-pink-500 bg-purple-50 p-6 [&_summary::-webkit-details-marker]:hidden" data-aos="fade-up">
           <summary className="flex cursor-pointer items-center justify-between gap-1.5">
             <h2 className="text-lg font-medium text-gray-900">Adhesions</h2>
 
@@ -112,7 +117,7 @@ const Faq = () => {
           </p>
         </details>
 
-        <details className="group border-s-4 border-pink-500 bg-purple-50 p-6 [&_summary::-webkit-details-marker]:hidden">
+        <details className="group border-s-4 border-pink-500 bg-purple-50 p-6 [&_summary::-webkit-details-marker]:hidden" data-aos="fade-up">
           <summary className="flex cursor-pointer items-center justify-between gap-1.5">
             <h2 className="text-lg font-medium text-gray-900">
               Uterine Anomalies
@@ -149,7 +154,7 @@ const Faq = () => {
           </p>
         </details>
 
-        <details className="group border-s-4 border-pink-500 bg-purple-50 p-6 [&_summary::-webkit-details-marker]:hidden">
+        <details className="group border-s-4 border-pink-500 bg-purple-50 p-6 [&_summary::-webkit-details-marker]:hidden" data-aos="fade-up">
           <summary className="flex cursor-pointer items-center justify-between gap-1.5">
             <h2 className="text-lg font-medium text-gray-900">Endometriosis</h2>
 
@@ -180,7 +185,7 @@ const Faq = () => {
           </p>
         </details>
 
-        <details className="group border-s-4 border-pink-500 bg-purple-50 p-6 [&_summary::-webkit-details-marker]:hidden">
+        <details className="group border-s-4 border-pink-500 bg-purple-50 p-6 [&_summary::-webkit-details-marker]:hidden" data-aos="fade-up">
           <summary className="flex cursor-pointer items-center justify-between gap-1.5">
             <h2 className="text-lg font-medium text-gray-900">
               Polycystic Ovarian Disease
