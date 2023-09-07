@@ -63,11 +63,11 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav class="bg-white dark:bg-gray-800  shadow ">
+      <nav class="bg-white">
         <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div class="flex h-16 items-center justify-between">
             <div className="md:flex md:items-center md:gap-12 pb-3">
-              <a className="block text-teal-600" href="/">
+              <a className="block" href="/">
                 <span className="sr-only">Home</span>
                 <img src={Logo} alt="Logo" />
               </a>

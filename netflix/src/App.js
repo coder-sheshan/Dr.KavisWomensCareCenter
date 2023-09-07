@@ -10,31 +10,31 @@ import Consultant from "./Screens/Consultant";
 import { useEffect, useState } from "react";
 import Testimonial from "./Components/Testimonial";
 import TestimoSrc from "./Screens/TestimoSrc";
+import Appoint from "./Components/Appoint";
 
 function App() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
+    const timer = setTimeout(() => {
+      setIsModalOpen(true);
+    }, 5000);
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => clearTimeout(timer);
   }, []);
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="App">
-      <div className=" scroll-smooth transition-opacity duration-500	">
-        <div className={`fade-in-container ${isVisible ? "fade-in" : ""}`}>
+      <div className=" scroll-smooth transition-opacity duration-500">
+        <div>
           <Header />
           <Navbar />
+          {/* <Appoint isOpen={isModalOpen} closeModal={closeModal} /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
