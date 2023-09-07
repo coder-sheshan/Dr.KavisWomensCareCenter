@@ -10,15 +10,22 @@ const Doctor = () => {
             <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
               <img
                 alt="Doctor_Img"
-                src={doctor}
+                src="https://www.skshospital.org/wp-content/uploads/2021/03/Dr.kavita-nagarajan.jpg"
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
 
             <div className="lg:py-24">
-              <h2 className="text-3xl font-bold sm:text-4xl">About Me</h2>
+              <h2 className="text-xl font-semibold text-pink-500 sm:text-4xl">
+                About Me
+              </h2>
 
-              <p className="mt-4 text-pink-500 text-justify">
+              <p className="mt-2 text-indigo-800 max-w-lg sm:text-xl/relaxed">
+              Dr.KAVITHA NAGARAJAN MD.,(OG), MRCOG (UK), Fellow (Repr.Med), MICG
+              Clinical Director & Consultant Repr. Med
+            </p>
+
+              <p className="mt-3 text-justify">
                 A renowned consultant and secretary of salem chapter of Tapisar
                 at salem. She started her carrier as an Obstetrician and
                 gynaecologist in 2007 and proved to be outstanding in her field
@@ -38,12 +45,38 @@ const Doctor = () => {
                 has changed the face of ART in Salem.
               </p>
 
-              <a
-                href="#"
-                className="mt-8 inline-block rounded bg-pink-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-rose-700 focus:outline-none focus:ring focus:ring-yellow-400"
-              >
-                Know more
-              </a>
+              <div className="flow-root rounded-lg border border-gray-100 py-3 mt-5 shadow-sm">
+                <dl className="-my-3 divide-y divide-gray-100 text-sm">
+                  <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+                    <dt className="font-medium text-gray-900">MBBS</dt>
+                    <dd className="text-gray-700 sm:col-span-2">SRI SIDDHARTHA MEDICAL COLLEGE, TUMKUR 2002</dd>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+                    <dt className="font-medium text-gray-900">MD (OG)</dt>
+                    <dd className="text-gray-700 sm:col-span-2">
+                    KASTURBA MEDICAL COLLEGE, MANGALORE 2007
+                    </dd>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+                    <dt className="font-medium text-gray-900">Fellow (Repr.Med)</dt>
+                    <dd className="text-gray-700 sm:col-span-2">CRAFT HOSPITAL & RESEARCH INSTITUTE, KODUNGALLUR 2011</dd>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+                    <dt className="font-medium text-gray-900">MRCOG (UK)</dt>
+                    <dd className="text-gray-700 sm:col-span-2">ROYAL COLLEGE, LONDON 2018.</dd>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+                    <dt className="font-medium text-gray-900">MICG</dt>
+                    <dd className="text-gray-700 sm:col-span-2">
+                    MASTERS IN COSMETIC GYNAECOLOGY 2021
+                    </dd>
+                  </div>
+                </dl>
+              </div>
             </div>
           </div>
         </div>
@@ -53,3 +86,16 @@ const Doctor = () => {
 };
 
 export default Doctor;
+
+
+
+
+// MBBS                            - SRI SIDDHARTHA MEDICAL COLLEGE, TUMKUR 2002
+
+// MD (OG)                     - KASTURBA MEDICAL COLLEGE, MANGALORE 2007
+
+// Fellow (Repr.Med)      - CRAFT HOSPITAL & RESEARCH INSTITUTE, KODUNGALLUR 2011
+
+// MRCOG (UK)            - ROYAL COLLEGE, LONDON 2018.
+
+// MICG                            - MASTERS IN COSMETIC GYNAECOLOGY 2021
