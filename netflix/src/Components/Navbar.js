@@ -117,7 +117,7 @@ const Navbar = () => {
               <div class="flex items-center ml-4 md:ml-6">
                 <a
                   className="rounded-md bg-pink-500 px-5 py-2.5 text-xs font-medium text-white shadow"
-                  href="/"
+                  href="/contact"
                   onClick={togglePopup}
                 >
                   APPOINTMENT
